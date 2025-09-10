@@ -1,4 +1,4 @@
-class FromSource < Formula
+class Fromsource < Formula
   desc "An example installing a Go app from source"
   url "https://github.com/theothertomelliott/homebrew-example.git",
       tag:      "v0.3.11",
