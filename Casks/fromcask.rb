@@ -1,3 +1,5 @@
+## This example will fall foul of a gatekeeper error on recent MacOS versions.
+## ../Formulae/fromsource.rb demonstrates a working example building from source.
 cask "fromcask" do
   version "0.0.2"
   
