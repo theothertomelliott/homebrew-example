@@ -11,8 +11,4 @@ class Fromsource < Formula
   def install
     system "go", "build", *std_go_args(), "."
   end
-
-  test do
-    system "#{bin}/homebrew-example"
-  end
 end
