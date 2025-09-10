@@ -1,62 +1,19 @@
 cask "fromcask" do
-  version "0.3.11"
+  version "0.0.2"
   
   name "Homebrew Example"
   desc "An example Go application distributed as a binary"
   homepage "https://github.com/theothertomelliott/homebrew-example"
 
-  # macOS Intel (x86_64)
   on_intel do
     url "https://github.com/theothertomelliott/homebrew-example/releases/download/v#{version}/homebrew-example-darwin-amd64.tar.gz"
-    sha256 "INTEL_SHA256_PLACEHOLDER"
+    sha256 "b6a53e31c9589af4652c83d2e30b466dd7056c50bd50302fa086408c2d3b78d2"
   end
 
-  # macOS Apple Silicon (ARM64)
   on_arm do
     url "https://github.com/theothertomelliott/homebrew-example/releases/download/v#{version}/homebrew-example-darwin-arm64.tar.gz"
-    sha256 "ARM64_SHA256_PLACEHOLDER"
-  end
-
-  # Linux x86_64
-  on_system :linux, macos: false do
-    on_arch :x86_64 do
-      url "https://github.com/theothertomelliott/homebrew-example/releases/download/v#{version}/homebrew-example-linux-amd64.tar.gz"
-      sha256 "LINUX_AMD64_SHA256_PLACEHOLDER"
-    end
-  end
-
-  # Linux ARM64
-  on_system :linux, macos: false do
-    on_arch :arm64 do
-      url "https://github.com/theothertomelliott/homebrew-example/releases/download/v#{version}/homebrew-example-linux-arm64.tar.gz"
-      sha256 "LINUX_ARM64_SHA256_PLACEHOLDER"
-    end
-  end
-
-  # Linux ARM (32-bit)
-  on_system :linux, macos: false do
-    on_arch :arm do
-      url "https://github.com/theothertomelliott/homebrew-example/releases/download/v#{version}/homebrew-example-linux-arm.tar.gz"
-      sha256 "LINUX_ARM_SHA256_PLACEHOLDER"
-    end
-  end
-
-  # Windows x86_64
-  on_system :windows, macos: false do
-    on_arch :x86_64 do
-      url "https://github.com/theothertomelliott/homebrew-example/releases/download/v#{version}/homebrew-example-windows-amd64.zip"
-      sha256 "WINDOWS_AMD64_SHA256_PLACEHOLDER"
-    end
-  end
-
-  # Windows ARM64
-  on_system :windows, macos: false do
-    on_arch :arm64 do
-      url "https://github.com/theothertomelliott/homebrew-example/releases/download/v#{version}/homebrew-example-windows-arm64.zip"
-      sha256 "WINDOWS_ARM64_SHA256_PLACEHOLDER"
-    end
+    sha256 "8ef6aba23c7875cc9f9a9fdee859d3e9c379283cb79677f583cf9f6d595c68fb"
   end
 
   binary "homebrew-example"
-  binary "homebrew-example.exe", target: "homebrew-example" if OS.windows?
 end
